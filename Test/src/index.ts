@@ -11,9 +11,11 @@ const test: enmityPlugins.Plugin = {
 
     onStart() {
         enmityComp.Alert("test");
+        alert("test");
     },
 
     onStop() {
+
     },
 }
 
