@@ -1,19 +1,15 @@
-import * as enmityModules from "enmity/modules";
-import * as enmityPlugins from "enmity/managers/plugins";
-import * as enmityPatcher from "enmity/patcher";
-import * as enmityComp from "enmity/components";
-import * as enmityCommon from "enmity/metro";
-import * as enmityAssests from "enmity/api/assets";
+import { Alert } from "enmity/components";
+import {Plugin, registerPlugin} from "enmity/managers/plugins";
 import manifest from '../manifest.json';
 
 import Settings from './components/Settings';
 
 
-const SilentTyping: enmityPlugins.Plugin = {
+const SilentTyping: Plugin = {
    ...manifest,
 
    onStart() {
-      enmityComp.Alert("test");
+      Alert("Test");
    },
 
    onStop() {
@@ -24,4 +20,4 @@ const SilentTyping: enmityPlugins.Plugin = {
    }
 };
 
-enmityPlugins.registerPlugin(SilentTyping);
+registerPlugin(SilentTyping);
