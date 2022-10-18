@@ -1,15 +1,17 @@
-import { Alert } from "enmity/components";
-import {Plugin, registerPlugin} from "enmity/managers/plugins";
+import { Plugin, registerPlugin } from 'enmity/managers/plugins';
+import { React } from 'enmity/metro/common';
+import { getByProps } from 'enmity/metro';
+import { create } from 'enmity/patcher';
 import manifest from '../manifest.json';
 
 import Settings from './components/Settings';
 
 
-const SilentTyping: Plugin = {
+const Test: Plugin = {
    ...manifest,
 
    onStart() {
-      Alert("Test");
+      alert("test");
    },
 
    onStop() {
@@ -20,4 +22,4 @@ const SilentTyping: Plugin = {
    }
 };
 
-registerPlugin(SilentTyping);
+registerPlugin(Test);
