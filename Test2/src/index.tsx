@@ -12,20 +12,19 @@ const Test: Plugin = {
    ...manifest,
 
    onStart() {
-      Alert(
+      Alert.alert(
          "Alert",
          "Alert msg",
          [
             {
                text: "Cancel",
                onPress: () => alert("pressed cancel"),
-               style: "cancel"
             },
             {
                text: "OK",
                onPress: () => alert("pressed ok"),
             },
-         ],
+         ]
       );
    },
 
