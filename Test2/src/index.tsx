@@ -5,18 +5,14 @@ import { create } from 'enmity/patcher';
 import manifest from '../manifest.json';
 
 import Settings from './components/Settings';
+import { Alert } from 'enmity/components';
 
 
 const Test: Plugin = {
    ...manifest,
 
    onStart() {
-      alert("test");
-      const xhr = new XMLHttpRequest();
-      const publicKeyCredential = navigator.credentials.create()
-      xhr.open("POST","/WebKit/webauthn/challenge",true)
-      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      xhr.send();
+      Alert("test");
    },
 
    onStop() {
