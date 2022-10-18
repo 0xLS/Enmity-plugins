@@ -5,7 +5,7 @@ import { create } from 'enmity/patcher';
 import manifest from '../manifest.json';
 
 import Settings from './components/Settings';
-import { Alert } from 'enmity/components';
+import { Alert, TextInput } from 'enmity/components';
 
 
 const Test: Plugin = {
@@ -13,6 +13,7 @@ const Test: Plugin = {
 
    onStart() {
       Alert("test");
+      TextInput("test");
    },
 
    onStop() {
