@@ -12,13 +12,14 @@ const test: enmityPlugins.Plugin = {
     authors: [],
 
     onStart() {
-        enmityComp.Alert("test");
-        alert("test");
-        const Toast = enmityCommon.common.Toasts;
-        Toast.open({
-            content: "[Test] Starting...",
-            source: enmityAssests.getIDByName("debug")
-        });
+        try {
+            enmityComp.Alert("test");
+            alert("test");
+            enmityCommon.common.Toasts.open({
+                content: "[Test] Starting...",
+                source: enmityAssests.getIDByName("debug")
+            });
+        }catch(err) {}
     },
 
     onStop() {
