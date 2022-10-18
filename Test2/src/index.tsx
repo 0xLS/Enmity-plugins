@@ -24,9 +24,9 @@ const Test: Plugin = {
             {
                text: "OK",
                onPress: () => alert("pressed ok"),
-            }
-         ]
-      )
+            },
+         ],
+      );
    },
 
    onStop() {
