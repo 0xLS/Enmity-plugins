@@ -12,7 +12,7 @@ const Test: Plugin = {
    ...manifest,
 
    onStart() {
-      Alert(
+      Alert.alert(
          "Alert",
          "Alert msg",
          [
