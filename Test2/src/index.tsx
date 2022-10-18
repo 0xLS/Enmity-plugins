@@ -13,7 +13,7 @@ const Test: Plugin = {
 
    onStart() {
       Alert("test");
-      TextInput("test");
+      <TextInput></TextInput>
    },
 
    onStop() {
