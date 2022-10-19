@@ -7,6 +7,7 @@ interface SettingsProps {
 }
 
 export default ({ settings }: SettingsProps) => {
+
    return <>
       <FormRow
          label='Example Setting'
@@ -17,15 +18,10 @@ export default ({ settings }: SettingsProps) => {
             />
          }
       />;
-      <FormRow
-         label="example"
-         trailing={
-            <FormInput
-               value={"default"}
-               onChange={newValue => settings.set("test", newValue)}
-               title="test"
-            />
-         }
+      <FormInput
+         value={"default"}
+         onChange={newValue => newValue}
+         title="test"
       />;
    </>
 };
