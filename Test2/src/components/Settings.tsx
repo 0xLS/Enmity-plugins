@@ -20,7 +20,7 @@ export default ({ settings }: SettingsProps) => {
    <FormRow
       label="Uga buga"
       trailing={
-         <TextInput
+         <FormInput
             value={settings.get("test", "abc")}
             onValueChange={(newValue) => settings.set("test", newValue)}
          />
