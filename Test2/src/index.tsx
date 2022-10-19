@@ -27,7 +27,9 @@ const Test: Plugin = {
          ]
       );
 
-      Toasts.open("test");
+      Toasts.open({
+         content: "[Test] starting..."
+      });
    },
 
    onStop() {
