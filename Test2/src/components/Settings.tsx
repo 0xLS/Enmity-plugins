@@ -18,10 +18,5 @@ export default ({ settings }: SettingsProps) => {
             />
          }
       />;
-      <FormInput
-         value={"default"}
-         onChange={newValue => newValue}
-         title="test"
-      />;
    </>
 };
