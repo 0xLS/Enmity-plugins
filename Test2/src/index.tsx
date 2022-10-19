@@ -1,4 +1,5 @@
 import { Plugin, registerPlugin } from 'enmity/managers/plugins';
+import { getIDByName } from 'enmity/api/assets';
 import { React, Toasts } from 'enmity/metro/common';
 import { getByProps } from 'enmity/metro';
 import { create } from 'enmity/patcher';
@@ -28,7 +29,8 @@ const Test: Plugin = {
       );
 
       Toasts.open({
-         content: "[Test] starting..."
+         content: "[Test] starting...",
+         source: getIDByName("debug")
       });
    },
 
