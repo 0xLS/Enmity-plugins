@@ -1,4 +1,4 @@
-import { FormRow, FormSwitch } from 'enmity/components';
+import { FormInput, FormRow, FormSwitch, ScrollView } from 'enmity/components';
 import { SettingsStore } from 'enmity/api/settings';
 import { React } from 'enmity/metro/common';
 
@@ -7,7 +7,8 @@ interface SettingsProps {
 }
 
 export default ({ settings }: SettingsProps) => {
-   return <FormRow
+   return <>
+   <FormRow
       label='Example Setting'
       trailing={
          <FormSwitch
@@ -16,4 +17,14 @@ export default ({ settings }: SettingsProps) => {
          />
       }
    />;
+   <FormRow
+      label="Uga buga"
+      trailing={
+         <FormInput
+            value={settings.get("test", "abc")}
+            onValueChange={(newValue) => settings.set("test", newValue)}
+         />
+      }
+   />;
+   </>
 };
