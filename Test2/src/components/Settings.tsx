@@ -22,7 +22,7 @@ export default ({ settings }: SettingsProps) => {
          trailing={
             <FormInput
                value={"default"}
-               onValueChange={newValue => settings.set("test", newValue)}
+               onChange={newValue => settings.set("test", newValue)}
                title="test"
             />
          }
