@@ -18,7 +18,7 @@ const Test: Plugin = {
          source: getIDByName("debug"),
       })
 
-      alert(React.version);
+      Alert.alert(React.version);
 
       /*Alert.alert(
          "Alert",
