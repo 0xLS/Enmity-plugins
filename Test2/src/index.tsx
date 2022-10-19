@@ -13,6 +13,11 @@ const Test: Plugin = {
    ...manifest,
 
    onStart() {
+      Toasts.open({
+         content: "[Test] starting...",
+         source: getIDByName("debug"),
+      })
+      
       Alert.alert(
          "Alert",
          "Alert msg",
@@ -27,11 +32,6 @@ const Test: Plugin = {
             },
          ]
       );
-
-      Toasts.open({
-         content: "[Test] starting...",
-         source: getIDByName("debug")
-      });
    },
 
    onStop() {
