@@ -1,4 +1,4 @@
-import { FormInput, FormRow, FormSwitch, ScrollView } from 'enmity/components';
+import { FormInput, FormRow, FormSwitch, ScrollView, TextInput } from 'enmity/components';
 import { SettingsStore } from 'enmity/api/settings';
 import { React } from 'enmity/metro/common';
 
@@ -20,7 +20,7 @@ export default ({ settings }: SettingsProps) => {
    <FormRow
       label="Uga buga"
       trailing={
-         <FormInput
+         <TextInput
             value={settings.get("test", "abc")}
             onValueChange={(newValue) => settings.set("test", newValue)}
          />
