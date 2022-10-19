@@ -26,8 +26,6 @@
       "esbuild-windows-64": "^0.14.21"
    },
    "dependencies": {
-      "enmity": "*",
-      "react": "^18.1.0",
-      "rn-biometric-authentication": "^1.0.2"
+      "enmity": "*"
    }
 }
