@@ -17,8 +17,10 @@ const Test: Plugin = {
          content: "[Test] starting...",
          source: getIDByName("debug"),
       })
-      
-      Alert.alert(
+
+      Alert(React.version);
+
+      /*Alert.alert(
          "Alert",
          "Alert msg",
          [
@@ -31,7 +33,7 @@ const Test: Plugin = {
                onPress: () => alert("pressed ok"),
             },
          ]
-      );
+      );*/
    },
 
    onStop() {
