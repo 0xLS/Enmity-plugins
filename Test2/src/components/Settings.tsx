@@ -8,23 +8,19 @@ interface SettingsProps {
 
 export default ({ settings }: SettingsProps) => {
    return <>
-   <FormRow
-      label='Example Setting'
-      trailing={
-         <FormSwitch
-            value={settings.get('example', true)}
-            onValueChange={() => settings.toggle('example', true)}
-         />
-      }
-   />;
-   <FormRow
-      label="Uga buga"
-      trailing={
-         <FormInput
-            value={settings.get("test", "abc")}
-            onValueChange={(newValue) => settings.set("test", newValue)}
-         />
-      }
-   />;
+      <FormRow
+         label='Example Setting'
+         trailing={
+            <FormSwitch
+               value={settings.get('example', true)}
+               onValueChange={() => settings.toggle('example', true)}
+            />
+         }
+      />;
+      <FormInput
+         value={settings.get("test", "abc")}
+         onValueChange={newValue => settings.set("test", newValue)}
+         title="test"
+      />;
    </>
 };
