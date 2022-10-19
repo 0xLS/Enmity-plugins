@@ -17,10 +17,15 @@ export default ({ settings }: SettingsProps) => {
             />
          }
       />;
-      <FormInput
-         value={settings.get("test", "abc")}
-         onValueChange={newValue => settings.set("test", newValue)}
-         title="test"
+      <FormRow
+         label="example"
+         trailing={
+            <FormInput
+               value={"default"}
+               onValueChange={newValue => settings.set("test", newValue)}
+               title="test"
+            />
+         }
       />;
    </>
 };
